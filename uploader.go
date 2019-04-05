@@ -7,6 +7,8 @@ import (
 	"math/rand"
 	"net/http"
 	"os"
+	"path"
+	"strings"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -48,7 +50,7 @@ func (me *Uploader) checkPath(path string) (err error) {
 
 func (me *Uploader) Upload(c *gin.Context, fileKey string) (err error, filePath, filename string) {
 	mediaType := c.Param("media_type")
-	file, _, err := c.Request.FormFile(fileKey)
+	file, header, err := c.Request.FormFile(fileKey)
 	if err != nil {
 		c.String(http.StatusBadRequest, "Bad request")
 		log.Error(file, err)
@@ -69,7 +71,8 @@ func (me *Uploader) Upload(c *gin.Context, fileKey string) (err error, filePath,
 	}
 
 	// 文件名
-	filename = me.getSaveName()
+	extname := strings.ToLower(path.Ext(header.Filename))
+	filename = me.getSaveName() + extname
 	path := bytes.NewBufferString(fullPathStr)
 	path.WriteString(filename)
 	// 复制文件
