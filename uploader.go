@@ -44,7 +44,7 @@ func (me *Uploader) getSaveName() string {
 
 func (me *Uploader) checkPath(path string) (err error) {
 	_, err = os.Stat(path)
-	if !os.IsNotExist(err) {
+	if os.IsNotExist(err) {
 		err = os.MkdirAll(path, 0777)
 	}
 	return
