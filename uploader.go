@@ -55,7 +55,7 @@ func (me *Uploader) Upload(c *gin.Context, fileKey string) (err error, filePath,
 	file, _, err := c.Request.FormFile(fileKey)
 	if err != nil {
 		c.String(http.StatusBadRequest, "Bad request")
-		log.Info(file, err)
+		log.Error(file, err)
 		return
 	}
 
@@ -68,6 +68,7 @@ func (me *Uploader) Upload(c *gin.Context, fileKey string) (err error, filePath,
 	fullPathStr := fullPath.String()
 	err = me.checkPath(fullPathStr)
 	if err != nil {
+		log.Error(fullPathStr, err)
 		return
 	}
 
@@ -81,7 +82,7 @@ func (me *Uploader) Upload(c *gin.Context, fileKey string) (err error, filePath,
 
 	_, err = io.Copy(out, file)
 	if err != nil {
-		log.Info(err)
+		log.Error(err)
 		return
 	}
 	return
