@@ -13,15 +13,11 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-
-// UploadPath 上传路径
-var UploadPath = os.Getenv("UPLOAD_PATH")
-
 type Uploader struct {
 }
 
-func (me *Uploader) stringWithCharset(length int, charset string) string {
+func (me *Uploader) stringWithCharset(length int) string {
+	var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 	var seededRand *rand.Rand = rand.New(rand.NewSource(time.Now().UnixNano()))
 	b := make([]byte, length)
 	for i := range b {
@@ -39,7 +35,7 @@ func (me *Uploader) getSavePath(mediaType string) string {
 }
 
 func (me *Uploader) getSaveName() string {
-	return fmt.Sprintf("%d%s", time.Now().Unix(), me.stringWithCharset(12, charset))
+	return fmt.Sprintf("%d%s", time.Now().Unix(), me.stringWithCharset(12))
 }
 
 func (me *Uploader) checkPath(path string) (err error) {
@@ -62,7 +58,7 @@ func (me *Uploader) Upload(c *gin.Context, fileKey string) (err error, filePath,
 	// 文件上传相对路径
 	filePath = me.getSavePath(mediaType)
 	// 文件上传全路径
-	fullPath := bytes.NewBufferString(UploadPath)
+	fullPath := bytes.NewBufferString(os.Getenv("UPLOAD_PATH"))
 	fullPath.WriteString(filePath)
 	// 检查目录
 	fullPathStr := fullPath.String()
