@@ -8,4 +8,6 @@ var ErrCode = map[string]string{
 	"50000": "Server error",
 	"50001": "Directory creation failed",
 	"50002": "File copy failed",
+	"50003": "The mailbox has submitted the application",
+	"50004": "Wrong account or password",
 }
