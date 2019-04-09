@@ -11,6 +11,11 @@ const (
 	RedisConn = "default"
 )
 
+// 支付方式
+const (
+	PayPalWay = 1 // paypal支付
+)
+
 var (
 	//RateLimit API频率限制
 	RateLimit, _ = strconv.Atoi(os.Getenv("RateLimit"))
