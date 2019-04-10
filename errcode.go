@@ -12,4 +12,8 @@ var ErrCode = map[string]string{
 	"50004": "Wrong account or password",
 
 	"50005": "Create Order fail",
+	"50006": "User Exists",
+	"50007": "Email Exists",
+	"50008": "Password mismatch",
+	"50009": "Email Not Exists",
 }
