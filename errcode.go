@@ -2,6 +2,7 @@ package base
 
 // ErrCode 错误码
 var ErrCode = map[string]string{
+	"10000": "Token Error",
 	"40400": "Not Found",
 	"40401": "Product Not Found",
 
@@ -16,4 +17,5 @@ var ErrCode = map[string]string{
 	"50007": "Email Exists",
 	"50008": "Password mismatch",
 	"50009": "Email Not Exists",
+	"50010": "Did not pay",
 }
