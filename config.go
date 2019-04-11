@@ -17,7 +17,7 @@ const (
 
 // 支付方式
 const (
-	PayPalWay = 1 // paypal支付
+	PayPalWay = 4 // paypal支付
 )
 
 var (
