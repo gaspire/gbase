@@ -11,6 +11,10 @@ const (
 	RedisConn = "default"
 )
 
+const (
+	ROLE_REGISTER = 2 //普通注册用户
+)
+
 // 支付方式
 const (
 	PayPalWay = 1 // paypal支付
