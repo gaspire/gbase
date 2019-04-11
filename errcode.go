@@ -18,4 +18,7 @@ var ErrCode = map[string]string{
 	"50008": "Password mismatch",
 	"50009": "Email Not Exists",
 	"50010": "Did not pay",
+	"50011": "The order has been paid",
+	"50012": "Please place a new order",
+	"50013": "The order has been expired",
 }
