@@ -21,4 +21,6 @@ var ErrCode = map[string]string{
 	"50011": "The order has been paid",
 	"50012": "Please place a new order",
 	"50013": "The order has been expired",
+	"50014": "Please sign up first",
+	"50015": "Please fill in the number of participants",
 }
