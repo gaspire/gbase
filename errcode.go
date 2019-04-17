@@ -25,4 +25,5 @@ var ErrCode = map[string]string{
 	"50015": "Please fill in the number of participants",
 	"50016": "Parameter error",
 	"50017": "Verification code error",
+	"50018": "Wrong Auth Code",
 }
