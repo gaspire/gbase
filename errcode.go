@@ -4,7 +4,7 @@ package base
 var ErrCode = map[string]string{
 	"10000": "Token Error",
 	"40400": "Not Found",
-	"40401": "Product Not Found",
+	"40401": "Apply Information Not Found",
 
 	"50000": "Server error",
 	"50001": "Directory creation failed",
@@ -18,7 +18,7 @@ var ErrCode = map[string]string{
 	"50008": "Password mismatch",
 	"50009": "Email Not Exists",
 	"50010": "Did not pay",
-	"50011": "The order has been paid",
+	"50011": "Please do not repeat the order",
 	"50012": "Please place a new order",
 	"50013": "The order has been expired",
 	"50014": "Please sign up first",
@@ -26,4 +26,5 @@ var ErrCode = map[string]string{
 	"50016": "Parameter error",
 	"50017": "Verification code error",
 	"50018": "Wrong Auth Code",
+	"50019": "Paypal pay error",
 }
