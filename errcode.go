@@ -28,4 +28,5 @@ var ErrCode = map[string]string{
 	"50018": "Wrong Auth Code",
 	"50019": "Paypal pay error",
 	"50020": "Send Email Fail",
+	"50021": "Invalid Password Request",
 }
