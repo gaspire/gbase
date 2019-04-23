@@ -17,11 +17,11 @@ func GenerateCharacterCaptcha(height, width, mode, len int) (captchaID, base64Pn
 		ComplexOfNoiseText: 0,
 		ComplexOfNoiseDot:  0,
 		IsUseSimpleFont:    true,
-		IsShowHollowLine:   true,
+		IsShowHollowLine:   false,
 		IsShowNoiseDot:     false,
 		IsShowNoiseText:    false,
 		IsShowSlimeLine:    false,
-		IsShowSineLine:     true,
+		IsShowSineLine:     false,
 		CaptchaLen:         len,
 	}
 	captchaID, digitCap := base64Captcha.GenerateCaptcha("", config)
