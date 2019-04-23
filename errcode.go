@@ -29,4 +29,5 @@ var ErrCode = map[string]string{
 	"50019": "Paypal pay error",
 	"50020": "Send Email Fail",
 	"50021": "Invalid Password Request",
+	"50022": "Order has paid",
 }
