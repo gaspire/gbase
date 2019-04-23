@@ -5,6 +5,7 @@ var ErrCode = map[string]string{
 	"10000": "Token Error",
 	"40400": "Not Found",
 	"40401": "Apply Information Not Found",
+	"40402": "Submission Information Not Found",
 
 	"50000": "Server error",
 	"50001": "Directory creation failed",
