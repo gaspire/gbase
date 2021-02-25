@@ -1,4 +1,4 @@
-package base
+package gbase
 
 type SuccessResponse struct {
 	Code       int         `json:"code"`

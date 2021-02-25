@@ -1,4 +1,4 @@
-package base
+package gbase
 
 // ErrCode 错误码
 var ErrCode = map[string]string{
