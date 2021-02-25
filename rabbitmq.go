@@ -3,8 +3,8 @@ package base
 import (
 	"os"
 
-	pb "code.aliyun.com/go-tools/base/jobrequest"
-	"code.aliyun.com/go-tools/base/util"
+	pb "github.com/gaspire/gbase/jobrequest"
+	"github.com/gaspire/gbase/util"
 	"github.com/golang/protobuf/proto"
 	log "github.com/sirupsen/logrus"
 	"github.com/streadway/amqp"
