@@ -1,4 +1,4 @@
-module gbase
+module github.com/gaspire/gbase
 
 go 1.14
 

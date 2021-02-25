@@ -3,8 +3,8 @@ package gbase
 import (
 	"os"
 
-	pb "gbase/jobrequest"
-	"gbase/util"
+	pb "github.com/gaspire/gbase/jobrequest"
+	"github.com/gaspire/gbase/util"
 
 	"github.com/golang/protobuf/proto"
 	log "github.com/sirupsen/logrus"
