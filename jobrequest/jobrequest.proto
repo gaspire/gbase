@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message JobRequest {
+  string command = 1;
+  bytes data = 4;
+}

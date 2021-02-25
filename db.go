@@ -12,7 +12,6 @@ import (
 	"github.com/jinzhu/gorm"
 	// mysql
 	_ "github.com/jinzhu/gorm/dialects/mysql"
-	_ "github.com/joho/godotenv/autoload"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -75,7 +74,6 @@ func (me *dBInstance) init(str string) error {
 
 // Open opens database connection with the settings found in cfg
 func (me *dBInstance) open(dbType string) error {
-	log.Info(os.Getenv("DB_URL"))
 	switch dbType {
 	case "master":
 		me.Master = me.getConn(os.Getenv("DB_URL_MASTER"))
@@ -86,7 +84,6 @@ func (me *dBInstance) open(dbType string) error {
 	default:
 		return errors.New("db type err")
 	}
-
 	return nil
 }
 
