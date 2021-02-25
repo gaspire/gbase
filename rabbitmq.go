@@ -3,8 +3,9 @@ package base
 import (
 	"os"
 
-	pb "github.com/gaspire/gbase/jobrequest"
-	"github.com/gaspire/gbase/util"
+	pb "gbase/jobrequest"
+	"gbase/util"
+
 	"github.com/golang/protobuf/proto"
 	log "github.com/sirupsen/logrus"
 	"github.com/streadway/amqp"
